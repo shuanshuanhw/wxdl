@@ -24,8 +24,8 @@ public class WeixinLoginServiceImpl implements WeixinLoginService {
         String content = Constanst.PWD_MD5 + DateUtil.getYYYYMMdd();
         byte[] encrypt = AesUtil.encrypt(content, AesUtil.PASSWORD_SECRET_KEY, 16);
         String parseByte2HexStr = AesUtil.parseByte2HexStr(encrypt);
-     //   String url = HttpParame.AUTHORIZATION_URL;
-        String url = HttpParame.ACCESS_TOKEN_URL;
+        String url = HttpParame.AUTHORIZATION_URL;
+   //     String url = HttpParame.ACCESS_TOKEN_URL;
         url = url.replaceAll("APPID", PropertiesUtil.getValue(HttpParame.APPID));
         try {
             url = url.replaceAll("REDIRECT_URI", URLEncoder.encode(
