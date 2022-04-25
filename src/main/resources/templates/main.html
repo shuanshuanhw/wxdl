@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<body>
+<div style="padding: 20px">
+    <p>微信唯一标识OpenId：&nbsp;<font th:text="${userInfo.openid}"></font></p>
+    <p>昵称：&nbsp;<font th:text="${userInfo.nickname}"></font></p>
+    <p>性别：&nbsp;<font th:text="${userInfo.sexStr}"></font></p>
+    <p><img th:src="${userInfo.headimgurl}"/></p>
+    <p>国家：&nbsp;<font th:text="${userInfo.country}"></font></p>
+    <p>省份：&nbsp;<font th:text="${userInfo.province}"></font></p>
+    <p>市区：&nbsp;<font th:text="${userInfo.city}"></font></p>
+    <p>用户统一标识unionid：&nbsp;<font th:text="${userInfo.unionid}"></font></p>
+</div>
+</body>
+</html>
